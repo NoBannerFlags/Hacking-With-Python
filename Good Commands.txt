@@ -1,0 +1,14 @@
+Good commands to know:
+
+linux:
+ifconfig (interface) down - disables interface
+ifconfig (interface) hw ether (new mac address) - makes interface have a new mac address - mac addresses look like this 00:11:22:33:44:55 (6 segments of two characters)
+ifconfig (interface) up - enables interface
+
+python:
+subprocess.call(command) - runs system commands
+subprocess.call("command", shell = true) - better example
+
+
+PyCharm:
+ctrl+d = duplicate line;
