@@ -12,3 +12,4 @@ subprocess.call("command", shell = true) - better example
 
 PyCharm:
 ctrl+d = duplicate line;
+ctrl+/ = comment line
