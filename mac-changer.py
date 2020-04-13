@@ -23,23 +23,30 @@ def change_mac(interface, desired_Mac):
     subprocess.call(["ifconfig", interface, "hw", "ether", desired_Mac])
     subprocess.call(["ifconfig", interface, "up"])
 
+def get_current_mac(interface):
+    ifconfig_result = subprocess.check_output(["ifconfig", interface])
 
-options= get_arguments()
+    mac_address_search_result = re.search(r"\w\w:\w\w:\w\w:\w\w:\w\w:\w\w", ifconfig_result)
+
+    if mac_address_search_result:
+        return mac_address_search_result.group(0)
+    else:
+        print("[-]Could not find mac address!")
+
+
+options = get_arguments()
 
 
 print("Note: this program only works on linux!")
+
+
+# code that can no longer be used, but that I also dont want to delete
 # interface = input("Interface > ")
 # interface = options.interface
 # desired_Mac = input("What is your desired mac? ex:\n00:00:00:00:00:00\n")
 # desired_Mac = options.desired_mac
-# change_mac(options.interface, options.desired_mac)
 
-ifconfig_result = subprocess.check_output(["ifconfig", options.interface])
-print(ifconfig_result)
+current_mac = get_current_mac(options.interface)
+print("Current Mac = "+str(current_mac))
+change_mac(options.interface, options.desired_mac)
 
-mac_address_search_result = re.search(r"\w\w:\w\w:\w\w:\w\w:\w\w:\w\w", ifconfig_result)
-
-if mac_address_search_result:
-    print(mac_address_search_result.group(0))
-else:
-    print("[-]Could not find mac address!")
