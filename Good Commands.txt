@@ -4,6 +4,7 @@ linux:
 ifconfig (interface) down - disables interface
 ifconfig (interface) hw ether (new mac address) - makes interface have a new mac address - mac addresses look like this 00:11:22:33:44:55 (6 segments of two characters)
 ifconfig (interface) up - enables interface
+nmap - maps the network
 
 python:
 subprocess.call(command) - runs system commands
