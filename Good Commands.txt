@@ -1,4 +1,4 @@
-Good commands to know:
+Good commands or websites to know:
 
 linux:
 ifconfig (interface) down - disables interface
@@ -14,3 +14,10 @@ subprocess.check_output - check output of code
 PyCharm:
 ctrl+d = duplicate line;
 ctrl+/ = comment line
+
+Websites:
+pythex.org - regular expressions
+
+Regex:
+\w - alphanumeric (0-9, a-z, A-Z, basically any letters or numbers)
+\w\w:\w\w:\w\w:\w\w:\w\w:\w\w - finds mac address value
