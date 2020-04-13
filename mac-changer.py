@@ -23,6 +23,7 @@ def change_mac(interface, desired_Mac):
     subprocess.call(["ifconfig", interface, "hw", "ether", desired_Mac])
     subprocess.call(["ifconfig", interface, "up"])
 
+
 def get_current_mac(interface):
     ifconfig_result = subprocess.check_output(["ifconfig", interface])
 
@@ -47,6 +48,15 @@ print("Note: this program only works on linux!")
 # desired_Mac = options.desired_mac
 
 current_mac = get_current_mac(options.interface)
+
 print("Current Mac = "+str(current_mac))
+
 change_mac(options.interface, options.desired_mac)
 
+current_mac = get_current_mac(options.interface)
+
+
+if current_mac == options.desired_mac:
+    print("[+] MAC address successfully changed to " + current_mac)
+else:
+    print("[-] MAC address did not get changed!")
