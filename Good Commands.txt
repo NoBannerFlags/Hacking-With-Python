@@ -17,3 +17,7 @@ ctrl+/ = comment line
 
 Websites:
 pythex.org - regular expressions
+
+Regex:
+\w - alphanumeric (0-9, a-z, A-Z, basically any letters or numbers)
+\w\w:\w\w:\w\w:\w\w:\w\w:\w\w - finds mac address value
