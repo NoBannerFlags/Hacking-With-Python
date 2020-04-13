@@ -38,7 +38,7 @@ def get_current_mac(interface):
 options = get_arguments()
 
 
-print("Note: this program only works on linux!")
+print("Note: this program only works on linux! The Windows linux simulator WILL NOT WORK FOR THIS!")
 
 
 # code that can no longer be used, but that I also dont want to delete
