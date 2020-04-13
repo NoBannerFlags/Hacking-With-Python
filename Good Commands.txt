@@ -1,4 +1,4 @@
-Good commands to know:
+Good commands or websites to know:
 
 linux:
 ifconfig (interface) down - disables interface
@@ -14,3 +14,6 @@ subprocess.check_output - check output of code
 PyCharm:
 ctrl+d = duplicate line;
 ctrl+/ = comment line
+
+Websites:
+pythex.org - regular expressions
