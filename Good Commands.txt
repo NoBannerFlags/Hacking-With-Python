@@ -11,6 +11,7 @@ python:
 subprocess.call(command) - runs system commands
 subprocess.call("command", shell = true) - better example
 subprocess.check_output - check output of code
+scapy.ls(scapy.ARP()) - shows useful information for fields in scapy, for example pdst is the IP field.
 
 
 PyCharm:
