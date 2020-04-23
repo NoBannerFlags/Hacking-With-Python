@@ -12,9 +12,12 @@ def scan(ip):
     # arp_request_broadcast.show()
     # use for debug
 
-    answered_list, unanswerd_list = scapy.srp(arp_request_broadcast, timeout =1)
-    print(answered_list.summary())
-
+    answered_list, unanswerd_list = scapy.srp(arp_request_broadcast, timeout =1)[0]
+    for element in answered_list:
+        print(element[1].hwsrc)
+        print("has")
+        print(element[1].psrc)
+        print('----------------------------------------------')
 
 scan("127.0.0.1/24")
 # this is a placeholder, not an actual IP - NOTE: changed to loopback
